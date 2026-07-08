@@ -1,0 +1,121 @@
+/* Layout Row for Side-by-Side */
+.layout-row {
+    display: flex;
+    gap: var(--spacing-xl);
+    align-items: flex-start;
+}
+
+.col-main {
+    flex: 0 0 65%;
+    max-width: 65%;
+}
+
+.col-side {
+    flex: 0 0 calc(35% - var(--spacing-xl));
+    max-width: calc(35% - var(--spacing-xl));
+}
+
+@media (max-width: 900px) {
+    .layout-row {
+        flex-direction: column;
+        gap: var(--spacing-xl);
+    }
+    .col-main, .col-side {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+/* Navbar - Ultra Simple */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #FFF;
+    border-bottom: 1px solid var(--border-color);
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    gap: var(--spacing-md);
+    list-style: none;
+}
+
+.nav-links a {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+    color: var(--text-primary);
+}
+
+.mobile-toggle {
+    display: none;
+}
+
+/* Footer - Simple Text */
+.footer {
+    border-top: 1px solid var(--border-color);
+    padding: var(--spacing-lg) 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--spacing-md);
+}
+
+.footer-info h2 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.footer-info p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.contact-email {
+    font-size: 0.95rem;
+    font-weight: 600;
+    display: block;
+    margin-top: 0.5rem;
+    color: var(--text-primary);
+    text-decoration: underline;
+}
+
+.footer-social {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icon {
+    font-size: 0.9rem;
+    text-decoration: underline;
+    color: var(--text-primary);
+}
+
+.footer-bottom p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}

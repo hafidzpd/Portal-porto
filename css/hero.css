@@ -1,0 +1,51 @@
+/* Hero Section - Flat Document Style */
+#hero {
+    display: flex;
+    gap: var(--spacing-lg);
+    align-items: flex-start;
+}
+
+.hero-image {
+    flex: 0 0 150px;
+}
+
+.hero-image img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 1px solid var(--border-color);
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.name {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+}
+
+.tagline {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-md);
+}
+
+.description {
+    font-size: 0.95rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-muted);
+}
+
+.hero-cta {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+@media (max-width: 600px) {
+    #hero {
+        flex-direction: column;
+    }
+}

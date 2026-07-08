@@ -1,0 +1,22 @@
+:root {
+    /* Pure Monochrome Flat Theme */
+    --bg-main: #FFFFFF;
+    
+    --text-primary: #000000;
+    --text-secondary: #333333;
+    --text-muted: #666666;
+    
+    --border-color: #DDDDDD;
+
+    /* Typography */
+    --font-heading: 'Inter', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    /* Spacing & Layout - Very Compact */
+    --container-width: 1050px;
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2.5rem;
+}
