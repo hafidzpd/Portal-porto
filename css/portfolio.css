@@ -8,13 +8,21 @@
 .portfolio-card {
     display: flex;
     gap: var(--spacing-md);
-    padding-bottom: var(--spacing-md);
+    padding: var(--spacing-md);
     border-bottom: 1px solid var(--border-color);
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.portfolio-card:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+    box-shadow: 0 8px 30px var(--cursor-color);
+    border-color: transparent;
 }
 
 .portfolio-card:last-child {
     border-bottom: none;
-    padding-bottom: 0;
 }
 
 .card-image {
@@ -71,4 +79,89 @@
     .card-image, .card-image img {
         width: 100%;
     }
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-content {
+    background: var(--bg-main);
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 16px;
+    padding: var(--spacing-xl);
+    position: relative;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+
+.modal-overlay.active .modal-content {
+    transform: translateY(0);
+}
+
+.modal-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: transparent;
+    border: none;
+    font-size: 1.8rem;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: transform 0.2s;
+    line-height: 1;
+}
+
+.modal-close:hover {
+    transform: scale(1.2);
+}
+
+.modal-title {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-primary);
+}
+
+.modal-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: var(--spacing-lg);
+}
+
+.modal-body h4 {
+    margin-top: var(--spacing-md);
+    margin-bottom: var(--spacing-xs);
+    font-size: 1.1rem;
+    color: var(--text-primary);
+}
+
+.modal-body p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
 }

@@ -1,6 +1,7 @@
 :root {
-    /* Pure Monochrome Flat Theme */
-    --bg-main: #FFFFFF;
+    /* Aesthetic Light Theme */
+    --bg-main: #FAFAFA;
+    --bg-gradient: radial-gradient(circle at 10% 10%, rgba(255, 228, 230, 0.7) 0%, rgba(219, 234, 254, 0.7) 50%, rgba(250, 250, 250, 1) 100%);
     
     --text-primary: #000000;
     --text-secondary: #333333;
@@ -8,9 +9,11 @@
     
     --border-color: #DDDDDD;
 
-    --btn-primary-bg: #000000;
+    --btn-primary-bg: #1e1e1e;
     --btn-primary-text: #FFFFFF;
-    --btn-outline-hover: #F5F5F5;
+    --btn-outline-hover: #f3f4f6;
+    --btn-shadow: rgba(0,0,0,0.08);
+    --cursor-color: rgba(99, 102, 241, 0.18);
 
     /* Typography */
     --font-heading: 'Inter', sans-serif;
@@ -27,6 +30,7 @@
 
 [data-theme="dark"] {
     --bg-main: #121212;
+    --bg-gradient: radial-gradient(circle at top left, rgba(20, 30, 45, 0.7) 0%, rgba(18, 18, 18, 1) 60%);
     --text-primary: #FFFFFF;
     --text-secondary: #CCCCCC;
     --text-muted: #999999;
@@ -35,4 +39,6 @@
     --btn-primary-bg: #FFFFFF;
     --btn-primary-text: #000000;
     --btn-outline-hover: #333333;
+    --btn-shadow: rgba(255,255,255,0.1);
+    --cursor-color: rgba(255,255,255,0.04);
 }

@@ -32,7 +32,9 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: var(--bg-main);
+    background-color: color-mix(in srgb, var(--bg-main) 80%, transparent);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border-color);
     z-index: 1000;
 }

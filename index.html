@@ -21,12 +21,13 @@
     <link rel="stylesheet" href="css/portfolio.css">
     <link rel="stylesheet" href="css/skills.css">
     <script>
-        const savedTheme = localStorage.getItem('theme') || 'light';
+        const savedTheme = localStorage.getItem('theme') || 'dark';
         document.documentElement.setAttribute('data-theme', savedTheme);
     </script>
 </head>
 
 <body>
+    <div id="cursor-glow"></div>
 
     <!-- Navigation -->
     <header class="navbar">
@@ -54,7 +55,7 @@
         <div class="layout-row">
             <!-- Left Column: Hero & Portfolio -->
             <div class="col-main">
-                <section id="hero">
+                <section id="hero" class="reveal">
                     <div class="hero-image">
                         <img src="foto-saya.png" alt="Hafidz Putra Dermawan">
                     </div>
@@ -98,11 +99,11 @@
 
                 <hr class="section-divider" style="margin: 2rem 0;">
 
-                <section id="portfolio">
+                <section id="portfolio" class="reveal">
                     <h2 class="section-title">Proyek Pilihan</h2>
                     <div class="portfolio-list">
 
-                        <article class="portfolio-card">
+                        <article class="portfolio-card reveal" data-project="attendease">
                             <div class="card-image">
                                 <img src="foto-pso.png" alt="AttendEase">
                             </div>
@@ -120,7 +121,7 @@
                             </div>
                         </article>
 
-                        <article class="portfolio-card">
+                        <article class="portfolio-card reveal" data-project="laundryin">
                             <div class="card-image">
                                 <img src="foto-laundryin.png" alt="LaundryIn">
                             </div>
@@ -137,7 +138,7 @@
                             </div>
                         </article>
 
-                        <article class="portfolio-card">
+                        <article class="portfolio-card reveal" data-project="jastip">
                             <div class="card-image">
                                 <img src="foto-jastip.png" alt="Jastip Asrama ITS">
                             </div>
@@ -154,7 +155,7 @@
                             </div>
                         </article>
 
-                        <article class="portfolio-card">
+                        <article class="portfolio-card reveal" data-project="compvis">
                             <div class="card-image">
                                 <img src="foto-compvis.png" alt="Simulasi Absensi Computer Vision">
                             </div>
@@ -172,7 +173,7 @@
                             </div>
                         </article>
 
-                        <article class="portfolio-card">
+                        <article class="portfolio-card reveal" data-project="telkom">
                             <div class="card-image">
                                 <img src="foto-meoti.png" alt="Dashboard KPI PT Telkom Indonesia">
                             </div>
@@ -195,7 +196,7 @@
 
             <!-- Right Column: Experience & Skills -->
             <div class="col-side">
-                <section id="experience">
+                <section id="experience" class="reveal">
                     <h2 class="section-title">Pengalaman</h2>
                     <div class="experience-list">
                         <div class="experience-item">
@@ -249,7 +250,7 @@
 
                 <hr class="section-divider" style="margin: 2rem 0;">
 
-                <section id="skills">
+                <section id="skills" class="reveal">
                     <h2 class="section-title">Keahlian</h2>
                     <div class="skills-container">
                         <div class="skills-category">
@@ -277,7 +278,7 @@
 
                 <hr class="section-divider" style="margin: 2rem 0;">
 
-                <section id="social-media">
+                <section id="social-media" class="reveal">
                     <h2 class="section-title">Sosial Media</h2>
                     <div style="display: flex; gap: 1rem; flex-direction: column; padding-top: 0.5rem;">
                         <a href="https://www.instagram.com/hafidz.pd" target="_blank"
@@ -310,7 +311,7 @@
     </main>
 
     <!-- Footer / Contact Section -->
-    <footer id="contact" class="footer">
+    <footer id="contact" class="footer reveal">
         <div class="container footer-container">
             <div class="footer-info">
                 <h2>Mari Berkolaborasi!</h2>
@@ -328,6 +329,22 @@
             <p>&copy; 2026 Hafidz Putra Dermawan. All rights reserved.</p>
         </div>
     </footer>
+
+    <div class="modal-overlay" id="portfolio-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">&times;</button>
+            <img src="" alt="Project Image" class="modal-image" id="modal-image">
+            <h3 class="modal-title" id="modal-title">Project Title</h3>
+            <div class="modal-body">
+                <h4>Tujuan & Masalah</h4>
+                <p id="modal-problem"></p>
+                <h4>Proses Eksekusi</h4>
+                <p id="modal-process"></p>
+                <h4>Dampak/Output</h4>
+                <p id="modal-impact"></p>
+            </div>
+        </div>
+    </div>
 
     <!-- JS Files -->
     <script src="js/main.js"></script>
