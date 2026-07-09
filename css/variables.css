@@ -8,6 +8,10 @@
     
     --border-color: #DDDDDD;
 
+    --btn-primary-bg: #000000;
+    --btn-primary-text: #FFFFFF;
+    --btn-outline-hover: #F5F5F5;
+
     /* Typography */
     --font-heading: 'Inter', sans-serif;
     --font-body: 'Inter', sans-serif;
@@ -19,4 +23,16 @@
     --spacing-md: 1rem;
     --spacing-lg: 1.5rem;
     --spacing-xl: 2.5rem;
+}
+
+[data-theme="dark"] {
+    --bg-main: #121212;
+    --text-primary: #FFFFFF;
+    --text-secondary: #CCCCCC;
+    --text-muted: #999999;
+    --border-color: #333333;
+
+    --btn-primary-bg: #FFFFFF;
+    --btn-primary-text: #000000;
+    --btn-outline-hover: #333333;
 }

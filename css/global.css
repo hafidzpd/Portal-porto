@@ -73,12 +73,12 @@ img {
 }
 
 .btn-primary {
-    background-color: var(--text-primary);
-    color: #FFF;
+    background-color: var(--btn-primary-bg);
+    color: var(--btn-primary-text);
 }
 
 .btn-primary:hover {
-    background-color: #333;
+    opacity: 0.8;
 }
 
 .btn-outline {
@@ -87,5 +87,5 @@ img {
 }
 
 .btn-outline:hover {
-    background-color: #F5F5F5;
+    background-color: var(--btn-outline-hover);
 }

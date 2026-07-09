@@ -20,6 +20,10 @@
     <link rel="stylesheet" href="css/experience.css">
     <link rel="stylesheet" href="css/portfolio.css">
     <link rel="stylesheet" href="css/skills.css">
+    <script>
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    </script>
 </head>
 
 <body>
@@ -27,13 +31,21 @@
     <!-- Navigation -->
     <header class="navbar">
         <div class="container nav-container">
-            <a href="#" class="logo">Hafidz</a>
-            <nav>
+            <a href="#" class="logo">
+                <img src="boy.png" alt="Logo" style="width: 36px; height: 36px; object-fit: contain;">
+                Hafidz's Portofolio
+            </a>
+            <nav style="display: flex; align-items: center; gap: 1rem;">
                 <ul class="nav-links">
                     <li><a href="#hero">Beranda</a></li>
                     <li><a href="#portfolio">Portofolio</a></li>
                     <li><a href="#contact">Kontak</a></li>
                 </ul>
+                <button id="theme-toggle"
+                    style="background: transparent; border: none; cursor: pointer; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; padding: 0.2rem;"
+                    aria-label="Toggle Dark Mode">
+                    <span id="theme-icon">🌙</span>
+                </button>
             </nav>
         </div>
     </header>
@@ -67,7 +79,7 @@
                     <h2 class="section-title">Pendidikan</h2>
                     <div class="experience-list">
                         <div class="experience-item" style="display: flex; align-items: center; gap: 1rem;">
-                            <img src="logo-its.jfif" alt="Logo ITS"
+                            <img src="logo-its.png" alt="Logo ITS"
                                 style="width: 50px; height: 50px; object-fit: contain; border-radius: 4px;">
                             <div>
                                 <h3 class="exp-role">S1 Sistem Informasi</h3>
@@ -75,7 +87,7 @@
                             </div>
                         </div>
                         <div class="experience-item" style="display: flex; align-items: center; gap: 1rem;">
-                            <img src="logo-tn.jfif" alt="Logo SMA TN"
+                            <img src="logo-tn1.webp" alt="Logo SMA TN"
                                 style="width: 50px; height: 50px; object-fit: contain; border-radius: 4px;">
                             <div>
                                 <h3 class="exp-role">SMA Taruna Nusantara Magelang</h3>
@@ -270,7 +282,8 @@
                     <div style="display: flex; gap: 1rem; flex-direction: column; padding-top: 0.5rem;">
                         <a href="https://www.instagram.com/hafidz.pd" target="_blank"
                             style="text-decoration: none; display: flex; align-items: center; gap: 0.8rem; color: var(--text-primary, #333); font-weight: 500; font-size: 0.95rem;">
-                            <img src="instagram.png" alt="Instagram" style="width: 28px; height: 28px; object-fit: contain;">
+                            <img src="instagram.png" alt="Instagram"
+                                style="width: 28px; height: 28px; object-fit: contain;">
                             @hafidz.pd
                         </a>
                         <a href="mailto:hafidzpd04@gmail.com"
@@ -280,12 +293,14 @@
                         </a>
                         <a href="https://www.linkedin.com/in/hafidz-putra-dermawan-680a543b6/" target="_blank"
                             style="text-decoration: none; display: flex; align-items: center; gap: 0.8rem; color: var(--text-primary, #333); font-weight: 500; font-size: 0.95rem;">
-                            <img src="linkedin.png" alt="LinkedIn" style="width: 28px; height: 28px; object-fit: contain;">
+                            <img src="linkedin.png" alt="LinkedIn"
+                                style="width: 28px; height: 28px; object-fit: contain;">
                             Hafidz Putra Dermawan
                         </a>
                         <a href="https://wa.me/6281317469934" target="_blank"
                             style="text-decoration: none; display: flex; align-items: center; gap: 0.8rem; color: var(--text-primary, #333); font-weight: 500; font-size: 0.95rem;">
-                            <img src="whatsapp.png" alt="WhatsApp" style="width: 28px; height: 28px; object-fit: contain;">
+                            <img src="whatsapp.png" alt="WhatsApp"
+                                style="width: 28px; height: 28px; object-fit: contain;">
                             081317469934
                         </a>
                     </div>
