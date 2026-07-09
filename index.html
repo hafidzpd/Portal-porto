@@ -21,7 +21,8 @@
     <link rel="stylesheet" href="css/portfolio.css">
     <link rel="stylesheet" href="css/skills.css">
     <script>
-        const savedTheme = localStorage.getItem('theme') || 'dark';
+        // Use a new storage key to forcefully reset preference to dark mode for returning users
+        const savedTheme = localStorage.getItem('theme-v2') || 'dark';
         document.documentElement.setAttribute('data-theme', savedTheme);
     </script>
 </head>
@@ -46,6 +47,9 @@
                     style="background: transparent; border: none; cursor: pointer; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; padding: 0.2rem;"
                     aria-label="Toggle Dark Mode">
                     <span id="theme-icon">🌙</span>
+                </button>
+                <button class="mobile-toggle" aria-label="Menu" style="background: transparent; border: none; cursor: pointer; font-size: 1.5rem; color: var(--text-primary); padding: 0 0.5rem;">
+                    &#9776;
                 </button>
             </nav>
         </div>

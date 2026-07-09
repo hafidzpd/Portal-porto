@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
             let newTheme = theme === 'dark' ? 'light' : 'dark';
             
             document.documentElement.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
+            localStorage.setItem('theme-v2', newTheme);
             themeIcon.textContent = newTheme === 'dark' ? '☀️' : '🌙';
         });
     }
